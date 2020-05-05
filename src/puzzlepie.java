@@ -40,8 +40,8 @@ public class puzzlepie extends Application {
         //load puzzle image
         Image image = new Image(getClass().getResourceAsStream("images/5.jpg"));
         ImageView backgroundBlack = new ImageView(new Image(getClass().getResourceAsStream("images/6.jpg")));
-        int numOfColumns = 4;
-        int numOfRows = 4;
+        int numOfColumns = 2;
+        int numOfRows = 2;
         //create desk
         final Desk desk = new Desk(numOfColumns, numOfRows);
         //create puzzle pieces
@@ -52,7 +52,7 @@ public class puzzlepie extends Application {
                 int y = row * Piece.SIZE;
                 final Piece piece = new Piece(image, x, y, row > 0, col > 0,
                         row < numOfRows - 1, col < numOfColumns - 1,
-                        desk.getWidth(), desk.getHeight());
+                        desk.getWidth(), desk.getHeight(), true);
                 pieces.add(piece);
             }
         }
@@ -108,10 +108,11 @@ public class puzzlepie extends Application {
         b1_1.setTranslateY(650);
         b1_1.setStyle("-fx-border-color: rgb(46,49,20); -fx-font-size: 40px");
         b1_1.setOnAction(e -> {
+
             Text falseAnswer = new Text();
-            falseAnswer.setText("Неверно! \n Правильный ответ - 3!");
+            falseAnswer.setText("Неверно! \nПравильный ответ - 3!");
             falseAnswer.setStyle("-fx-font-size: 30px");
-            falseAnswer.setTranslateX(400);
+            falseAnswer.setTranslateX(600);
             falseAnswer.setTranslateY(550);
 
             nextQuestion1.setTranslateX(-1500);
@@ -127,10 +128,12 @@ public class puzzlepie extends Application {
         b1_2.setTranslateY(650);
         b1_2.setStyle("-fx-border-color: rgb(46,49,20); -fx-font-size: 40px");
         b1_2.setOnAction(e -> {
+
+
             Text falseAnswer = new Text();
-            falseAnswer.setText("Неверно! \n Правильный ответ - 3!");
+            falseAnswer.setText("Неверно! \nПравильный ответ - 3!");
             falseAnswer.setStyle("-fx-font-size: 30px");
-            falseAnswer.setTranslateX(400);
+            falseAnswer.setTranslateX(600);
             falseAnswer.setTranslateY(550);
 
             nextQuestion1.setTranslateX(-1500);
@@ -149,7 +152,7 @@ public class puzzlepie extends Application {
             Text falseAnswer = new Text();
             falseAnswer.setText("Верно! Молодец!");
             falseAnswer.setStyle("-fx-font-size: 30px");
-            falseAnswer.setTranslateX(400);
+            falseAnswer.setTranslateX(600);
             falseAnswer.setTranslateY(550);
 
             nextQuestion1.setTranslateX(-1500);
@@ -166,9 +169,9 @@ public class puzzlepie extends Application {
         b1_4.setStyle("-fx-border-color: rgb(46,49,20); -fx-font-size: 40px");
         b1_4.setOnAction(e -> {
             Text falseAnswer = new Text();
-            falseAnswer.setText("Неверно! \n Правильный ответ - 3!");
+            falseAnswer.setText("Неверно! \nПравильный ответ - 3!");
             falseAnswer.setStyle("-fx-font-size: 30px");
-            falseAnswer.setTranslateX(400);
+            falseAnswer.setTranslateX(600);
             falseAnswer.setTranslateY(550);
 
             nextQuestion1.setTranslateX(-1500);
@@ -180,10 +183,18 @@ public class puzzlepie extends Application {
         });
 
 
-
-
-
-
+        Button buttonMenu = new Button("Выйти в меню");
+        buttonMenu.setTranslateX(700);
+        buttonMenu.setTranslateY(450);
+        buttonMenu.setStyle("-fx-border-color: rgb(46,49,20); -fx-font-size: 20px");
+        buttonMenu.setOnAction(e -> {
+            Menu pp = new Menu();
+            try {
+                pp.start(primaryStage);
+            } catch (Exception ee) {
+                ee.printStackTrace();
+            }
+        });
 
         //create button box
         Button shuffleButton = new Button("Картинку запомнил!");
@@ -217,7 +228,7 @@ public class puzzlepie extends Application {
         vb.setTranslateY(20);
         vb.getChildren().addAll(desk, buttonBox);
 
-        root.getChildren().addAll(vb);
+        root.getChildren().addAll(vb, buttonMenu);
 
     }
 
@@ -254,9 +265,6 @@ public class puzzlepie extends Application {
 
         }
 
-        @Override
-        protected void layoutChildren() {
-        }
     }
 
     /*
@@ -276,16 +284,18 @@ public class puzzlepie extends Application {
         private Shape pieceClip;
         private ImageView imageView = new ImageView();
         private Point2D dragAnchor;
+        private boolean activeOrNot;
 
         public Piece(Image image, final double correctX, final double correctY,
                      boolean topTab, boolean leftTab, boolean bottomTab,
-                     boolean rightTab, final double deskWidth, final double deskHeight) {
+                     boolean rightTab, final double deskWidth, final double deskHeight, boolean activeOrNot) {
             this.correctX = correctX;
             this.correctY = correctY;
             this.hasTopTab = topTab;
             this.hasLeftTab = leftTab;
             this.hasBottomTab = bottomTab;
             this.hasRightTab = rightTab;
+            this.activeOrNot = activeOrNot;
             //configure clip
             pieceClip = createPiece();
             pieceClip.setFill(Color.WHITE);
@@ -319,6 +329,7 @@ public class puzzlepie extends Application {
                         setTranslateX(0);
                         setTranslateY(0);
                         setInactive();
+
                     }
                 }
             });
@@ -397,12 +408,14 @@ public class puzzlepie extends Application {
             setDisable(false);
             setEffect(new DropShadow());
             toFront();
+            activeOrNot = true;
         }
 
         public void setInactive() {
             setEffect(null);
             setDisable(true);
             toBack();
+            activeOrNot = false;
         }
 
         public double getCorrectX() {

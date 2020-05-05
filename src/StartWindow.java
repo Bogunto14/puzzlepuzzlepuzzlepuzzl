@@ -18,19 +18,28 @@ public class StartWindow extends Application{
         Group root = new Group();
         primaryStage.setScene(new Scene(root));
 
-        ImageView backgroundBlack = new ImageView(new Image(getClass().getResourceAsStream("images/6.jpg")));
+        ImageView backgroundBlack = new ImageView(new Image(getClass().getResourceAsStream("images/background.jpg")));
+        backgroundBlack.setOpacity(0.6);
+        backgroundBlack.setFitHeight(800);
 
         Text text = new Text();
-        text.setText("Здравствуйте! Мы рады приветствовать Вас в игре по обучению языку Java!");
-        text.setTranslateX(200);
-        text.setTranslateY(200);
+        text.setText("                  Здравствуйте! \n     Мы рады приветствовать Вас\n   в игре по обучению языку Java!");
+        text.setStyle("-fx-font-size: 50; -fx-font-weight: 700; -fx-fill: white; -fx-stroke: black; -fx-stroke-width: 3");
+        text.setTranslateX(50);
+        text.setTranslateY(100);
 
         Button buttonStart = new Button("Начать");
-        buttonStart.setTranslateX(380);
-        buttonStart.setTranslateY(400);
+        buttonStart.setStyle("-fx-border-color: rgb(46,49,20); -fx-font-size: 40px");
+        buttonStart.setTranslateX(395);
+        buttonStart.setTranslateY(280);
         buttonStart.setOnAction(e -> openTask1(primaryStage));
 
-        root.getChildren().addAll(backgroundBlack, text,buttonStart);
+        ImageView logo = new ImageView(new Image(getClass().getResourceAsStream("images/logo.jpg")));
+        logo.setX(387);
+        logo.setY(400);
+        logo.setFitHeight(320);
+        logo.setFitWidth(200);
+        root.getChildren().addAll(backgroundBlack, text,buttonStart, logo);
     }
 
     @Override public void start(Stage primaryStage) throws Exception{
@@ -41,7 +50,7 @@ public class StartWindow extends Application{
     }
 
     public static void openTask1(Stage primaryStage) {
-        Task1 pp = new Task1();
+        Menu pp = new Menu();
         try {
             pp.start(primaryStage);
         } catch (Exception e) {
