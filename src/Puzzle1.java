@@ -189,7 +189,7 @@ public class Puzzle1 extends Application {
         if (now==16) {
             int c=0;
             for (int i = 0; i < pieces.size(); i++) {
-                if (pieces.get(i).activeOrNot==false) {
+                if (!pieces.get(i).activeOrNot) {
                     c++;
                 }
             }
