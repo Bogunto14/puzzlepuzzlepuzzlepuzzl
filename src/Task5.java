@@ -8,7 +8,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class Task3 extends Application{
+public class Task5 extends Application{
 
     public static void main (String[] args){
         launch(args);
@@ -39,7 +39,7 @@ public class Task3 extends Application{
     }
 
     public static void startPuzzle(Stage primaryStage) {
-        Puzzle3 pp = new Puzzle3();
+        Puzzle5 pp = new Puzzle5();
         try {
             pp.start(primaryStage);
         } catch (Exception e) {

@@ -39,7 +39,7 @@ public class Task1 extends Application{
     }
 
     public static void startPuzzle(Stage primaryStage) {
-        puzzlepie pp = new puzzlepie();
+        Puzzle1 pp = new Puzzle1();
         try {
             pp.start(primaryStage);
         } catch (Exception e) {

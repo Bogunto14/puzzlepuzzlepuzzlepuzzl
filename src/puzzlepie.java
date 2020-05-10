@@ -233,6 +233,41 @@ public class puzzlepie extends Application {
     }
 
 
+    private void createQuestion(Stage primaryStage, Group root) {
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /*
      * Node that represents the playing area/ desktop where the puzzle pieces sit
      */
