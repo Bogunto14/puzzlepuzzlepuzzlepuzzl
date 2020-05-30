@@ -46,7 +46,7 @@ public class Puzzle1 extends Application {
         Group root = new Group();
         primaryStage.setScene(new Scene(root));
 
-        Image image = new Image(getClass().getResourceAsStream("images/5.jpg"));
+        Image image = new Image(getClass().getResourceAsStream("images/5.png"));
 
         int numOfColumns = 4;
         int numOfRows = 4;

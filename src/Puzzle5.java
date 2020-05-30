@@ -46,7 +46,7 @@ public class Puzzle5 extends Application {
         Group root = new Group();
         primaryStage.setScene(new Scene(root));
 
-        Image image = new Image(getClass().getResourceAsStream("images/5.jpg"));
+        Image image = new Image(getClass().getResourceAsStream("images/5.png"));
 
         int numOfColumns = 4;
         int numOfRows = 4;
@@ -122,7 +122,7 @@ public class Puzzle5 extends Application {
 
         Button buttonMenu = new Button("Выйти в меню");
         buttonMenu.setTranslateX(700);
-        buttonMenu.setTranslateY(450);
+        buttonMenu.setTranslateY(600);
         buttonMenu.setStyle("-fx-border-color: rgb(46,49,20); -fx-font-size: 20px");
         buttonMenu.setOnAction(e -> {
             Menu pp = new Menu();
@@ -323,129 +323,129 @@ public class Puzzle5 extends Application {
     }
 
     private void createQ1(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 1, "1 Для чего нужны переменные?",
-                "1 Чтобы были",
-                "2 Чтобы были",
-                "3 Чтобы были",
-                "4 Чтобы были", 3);
+        createQ(primaryStage,root, 1, "1. Что определяет класс?",
+                "1) значения и атрибуты",
+                "2) значения и поведение",
+                "3) поведение и атрибуты",
+                "4) все ответы неверны ", 3);
     }
 
     private void createQ2(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 2, "2 Чики",
-                "1 4 были",
-                "2 3в были",
-                "3 ва были",
-                "4 ммм были", 4);
+        createQ(primaryStage,root, 2, "2. Сколько раз можно вызвать метод?",
+                "1) один",
+                "2) сколько угодно раз",
+                "3) два",
+                "4) не больше 5", 2);
     }
 
     private void createQ3(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 3, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 3, "3. Ключевое слово void означает, что ...",
+                "1) метод не возвращает значение",
+                "2) метод возвращает значение",
+                "3) метод будет статическим",
+                "4) все ответы неверны", 1);
     }
 
     private void createQ4(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 4, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 4, "4. Сколько атрибутов и методов вы можете определить?",
+                "1) не больше двух",
+                "2) один",
+                "3) сколько угодно ",
+                "4) все ответы неверны", 3);
     }
     private void createQ5(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 5, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 5, "5. В каком варианте класс определен верно?",
+                "1) void program(){} ",
+                "2) class Program{} ",
+                "3) int program",
+                "4) String program", 2);
     }
 
     private void createQ6(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 6, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 6, "6. Что является модификатором доступа?",
+                "1) public",
+                "2) private",
+                "3) protected",
+                "4) все ответы правильные", 4);
     }
 
     private void createQ7(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 7, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 7, "7. Какой уровень доступа имеет модификатор private?",
+                "1) доступ может быть получен только изнутри объявленного класса",
+                "2) доступ может быть получен из любого класса ",
+                "3) все ответы неверны",
+                "4) доступ может быть получен для любого класса в том пакете ", 1);
     }
 
     private void createQ8(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 8, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 8, "8. Какой уровень доступа имеет модификатор public?",
+                "1) доступ может быть получен только изнутри объявленного класса",
+                "2) доступ может быть получен из любого класса ",
+                "3) все ответы неверны",
+                "4) доступ может быть получен для любого класса в том пакете ", 2);
     }
 
     private void createQ9(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 9, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 9, "9. Какое ключевое слово используется для возвращения значения?",
+                "1) void",
+                "2) static",
+                "3) return",
+                "4) show", 3);
     }
 
     private void createQ10(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 10, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 10, "10. Сколько классов может создать пользователь?",
+                "1) один",
+                "2) ноль",
+                "3) сколько угодно",
+                "4) не больше двух", 3);
     }
 
     private void createQ11(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 11, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 11, "11. Можно ли создать класс с названием Red apple",
+                "1) да, можно",
+                "2) нет, нельзя",
+                "3) можно, если класс будет являться статическим",
+                "4) зависит от ситуации ", 2);
     }
 
     private void createQ12(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 12, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 12, "12. Можно ли создать класс внутри класса?",
+                "1) да",
+                "2) нет",
+                "3) можно, если класс будет являться статическим",
+                "4) можно, но обязательно несколько классов", 1);
     }
 
     private void createQ13(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 13, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 13, "13. Что такое вложенный класс?",
+                "1) статический класс,",
+                "2) класс, вложенный в пакет",
+                "3) класс, созданный внутри другого класса",
+                "4) все ответы неверны", 3);
     }
 
     private void createQ14(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 14, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 14, "14. Какое слово пропущено при создании класса: ...Person{}?",
+                "1) new",
+                "2) double",
+                "3) int",
+                "4) class", 4);
     }
     private void createQ15(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 15, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 15, "15. Какой уровень доступа имеет модификатор protected?",
+                "1) доступ может быть получен только изнутри объявленного класса",
+                "2) доступ может быть получен из любого класса ",
+                "3) все ответы неверны",
+                "4) доступ может быть получен для любого класса в том пакете ", 4);
     }
 
     private void createQ16(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 16, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 16, "Какое ключевое слово служит для создания статического класса?",
+                "1) void",
+                "2) class",
+                "3) statistics",
+                "4) static", 4);
     }
 
     private void createNewWindow(Stage primaryStage) {

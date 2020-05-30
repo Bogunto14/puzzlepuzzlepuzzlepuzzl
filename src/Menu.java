@@ -81,7 +81,7 @@ public class Menu extends Application{
         if (isLevelOpened[3]==true) {
 
             level4.setStyle("-fx-border-color: green; -fx-font-size: 40px");
-            level4.setOnAction(e -> openLevel3(primaryStage));
+            level4.setOnAction(e -> openLevel4(primaryStage));
         }
         else {
             level4.setStyle("-fx-border-color: green; -fx-font-size: 40px; -fx-background-color: gray");
@@ -98,7 +98,7 @@ public class Menu extends Application{
         if (isLevelOpened[4]==true) {
 
             level5.setStyle("-fx-border-color: green; -fx-font-size: 40px");
-            level5.setOnAction(e -> openLevel3(primaryStage));
+            level5.setOnAction(e -> openLevel5(primaryStage));
         }
         else {
             level5.setStyle("-fx-border-color: green; -fx-font-size: 40px; -fx-background-color: gray");

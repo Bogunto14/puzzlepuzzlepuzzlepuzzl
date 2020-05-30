@@ -46,7 +46,7 @@ public class Puzzle3 extends Application {
         Group root = new Group();
         primaryStage.setScene(new Scene(root));
 
-        Image image = new Image(getClass().getResourceAsStream("images/5.jpg"));
+        Image image = new Image(getClass().getResourceAsStream("images/5.png"));
 
         int numOfColumns = 4;
         int numOfRows = 4;
@@ -323,11 +323,11 @@ public class Puzzle3 extends Application {
     }
 
     private void createQ1(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 1, "1 Для чего нужны переменные?",
-                "1 Чтобы были",
-                "2 Чтобы были",
-                "3 Чтобы были",
-                "4 Чтобы были", 3);
+        createQ(primaryStage,root, 1, "1. Цикл For называют:",
+                "1) со счетчиком",
+                "2) делать до тех пор, пока",
+                "3) Чтобы были",
+                "4) Чтобы были", 3);
     }
 
     private void createQ2(Stage primaryStage,Group root) {

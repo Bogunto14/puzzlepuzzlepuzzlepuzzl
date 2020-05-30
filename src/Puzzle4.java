@@ -46,7 +46,7 @@ public class Puzzle4 extends Application {
         Group root = new Group();
         primaryStage.setScene(new Scene(root));
 
-        Image image = new Image(getClass().getResourceAsStream("images/5.jpg"));
+        Image image = new Image(getClass().getResourceAsStream("images/4.png"));
 
         int numOfColumns = 4;
         int numOfRows = 4;
@@ -323,129 +323,134 @@ public class Puzzle4 extends Application {
     }
 
     private void createQ1(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 1, "1 Для чего нужны переменные?",
-                "1 Чтобы были",
-                "2 Чтобы были",
-                "3 Чтобы были",
-                "4 Чтобы были", 3);
+        createQ(primaryStage,root, 1, "каким свойством обладает список?",
+                "1)список может включать в себя ограниченное количество элементов",
+                "2)все элементы списка имеют один и тот же тип",
+                "3)элементы списка зависимы от соседних элементов",
+                "4)все ответы неверны", 2);
     }
 
     private void createQ2(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 2, "2 Чики",
-                "1 4 были",
-                "2 3в были",
-                "3 ва были",
-                "4 ммм были", 4);
+        createQ(primaryStage,root, 2, "как указывается типовой аргумент Type?",
+                "1)TypeList",
+                "2)ListOfType()",
+                "3)ListOf(Type)",
+                "4)List<Type>", 4);
     }
 
     private void createQ3(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 3, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 3, "выберите строку, которая вызывает следующее в консоли: [1, 2, 3]",
+                "1)listOf<1, 2, 3>",
+                "2)println(listOf(1, 2, 3))",
+                "3)println(1, 2, 3)",
+                "4)return 1, 2, 3", 2);
     }
 
     private void createQ4(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 4, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 4, "с помощью какой функции c получателем сортируют списки?",
+                "1).picking()",
+                "2).sort()",
+                "3).sorting()",
+                "4).sorted()", 4);
     }
     private void createQ5(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 5, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 5, "как получить элемент 4 из списка val list = listOf(5, 4, 3)",
+                "1)list.get(4)",
+                "2)list[2]",
+                "3)list[1]",
+                "4)println(4)", 3);
     }
 
     private void createQ6(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 6, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 6, "как получить число 10 с помощью списка val list = listOf(5, 3, 2)",
+                "1)list[0 + 1 + 2]",
+                "2)list.max()",
+                "3)list.sum()",
+                "4)println(10)", 3);
     }
 
     private void createQ7(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 7, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 7, "что делает операция list1 + list2?",
+                "1)ставит на место каждого элемента из list1 " +
+                        "аналогичный по индексу из list2",
+                "2)складывает первые эелементы списка",
+                "3)складывает два списка, сумма списка содержит сумму элементов по индексу",
+                "4)складывает два списка, сумма списков содержит все элементы их обоих", 4);
     }
 
     private void createQ8(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 8, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 8, "что нельзя делать с мутирующими списками?",
+                "1)Изменять своё содержимое операторами list[i] = element",
+                "2)Удалять элементы из списка, с уменьшением размера на 1",
+                "3)Удалять элементы из списка по индексу, с уменьшением размера на 1",
+                "4)Вставлять элементы различных типов", 4);
     }
 
     private void createQ9(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 9, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 9, "что такое функция высшего порядка?",
+                "1)функция, которая, принимает в качестве параметра другую функцию",
+                "2)функция, которая принимает в качестве параметра список",
+                "3)функция, которая вызывает другие функции",
+                "4)все ответы неверны", 1);
     }
 
     private void createQ10(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 10, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 10, "что будет результатом операции list.filter { it != 0 }?",
+                "1)первый элемент списка, не равный нулю",
+                "2)первый элемент списка, равный нулю",
+                "3)список, содержащий элементы не равные нулю",
+                "4)список, содержащий элементы равные нулю", 3);
     }
 
     private void createQ11(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 11, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 11, "чем нужно в коде заменить знак *, чтобы получить список, содержащий одни единицы?\n" +
+                        "val list = mutableListOf(1, 1, 2, 3)\n" +
+                        "return list*",
+                "1).map{it / it}",
+                "2).filter{ it == 1}",
+                "3).subList(0, 2)",
+                "4)все ответы верны", 4);
     }
 
     private void createQ12(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 12, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 12, "чем нужно в коде заменить знак *, чтобы получить число 10.0?\n" +
+                        "val list = mutableListOf(2.0, 2.5, 2.0)\n" +
+                        "return list*",
+                "1).fold(1.0) {previousResult, element -> previousResult * element}",
+                "2).fold(10) {previousResult, element -> previousResult - element}",
+                "3).sum()",
+                "4).max() * 5", 1);
     }
 
     private void createQ13(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 13, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 13, "из каких элементов состоят строки?",
+                "1)boolean",
+                "2)long",
+                "3)short",
+                "4)char", 4);
     }
 
     private void createQ14(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 14, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 14, "что будет результатом операции 9.toString()?",
+                "1)'9'",
+                "2)\"9\"",
+                "3)['9']",
+                "4)[\"9\"]", 2);
     }
     private void createQ15(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 15, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 15, "как можно записать переменную variable в виде строки?",
+                "1)\"@variable\"",
+                "2)\"#variable\"",
+                "3)\"$variable\"",
+                "4)\"%variable\"", 3);
     }
 
     private void createQ16(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 16, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 16, "с помощью какой функции можно преобразовать список в строку?",
+                "1).toString()",
+                "2).getString()",
+                "3).joinToString()",
+                "4).goToString()", 3);
     }
 
     private void createNewWindow(Stage primaryStage) {
