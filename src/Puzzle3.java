@@ -46,7 +46,7 @@ public class Puzzle3 extends Application {
         Group root = new Group();
         primaryStage.setScene(new Scene(root));
 
-        Image image = new Image(getClass().getResourceAsStream("images/5.png"));
+        Image image = new Image(getClass().getResourceAsStream("images/4.png"));
 
         int numOfColumns = 4;
         int numOfRows = 4;
@@ -141,7 +141,7 @@ public class Puzzle3 extends Application {
         buttonsAreActive = true;
 
         q.setText(qStr);
-        q.setStyle("-fx-font-size: 20px");
+        q.setStyle("-fx-font-size: 18px");
         q.setTranslateX(50);
         q.setTranslateY(470);
 
@@ -207,7 +207,7 @@ public class Puzzle3 extends Application {
         trueAnswer.setText("Неверно! \nПравильный ответ - 1!");
         trueAnswer.setStyle("-fx-font-size: 30px");
         trueAnswer.setTranslateX(600);
-        trueAnswer.setTranslateY(550);
+        trueAnswer.setTranslateY(300);
         trueAnswer.setOpacity(0);
 
 
@@ -323,129 +323,129 @@ public class Puzzle3 extends Application {
     }
 
     private void createQ1(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 1, "1. Цикл For называют:",
-                "1) со счетчиком",
-                "2) делать до тех пор, пока",
-                "3) чтобы были",
-                "4) чтобы были", 1);
+        createQ(primaryStage,root, 1, "1.Каким свойством обладает список?",
+                "1) список может включать в себя ограниченное количество элементов",
+                "2) все элементы списка имеют один и тот же тип",
+                "3) элементы списка зависимы от соседних элементов",
+                "4) все ответы неверны", 2);
     }
 
     private void createQ2(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 2, "2.  Цикл while называют:",
-                "1) со счетчиком",
-                "2) делать до тех пор, пока",
-                "3) пока",
-                "4) во время того, как", 3);
+        createQ(primaryStage,root, 2, "2. Как указывается типовой аргумент Type?",
+                "1) TypeList",
+                "2) ListOfType()",
+                "3) ListOf(Type)",
+                "4) List<Type>", 4);
     }
 
     private void createQ3(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 3, "3. Цикл do while называют:",
-                "1) со счетчиком",
-                "2) делать до тех пор, пока",
-                "3) пока",
-                "4) во время того, как", 2);
+        createQ(primaryStage,root, 3, "3. Выберите строку, которая вызывает следующее в консоли: [1, 2, 3]",
+                "1) listOf<1, 2, 3>",
+                "2) println(listOf(1, 2, 3))",
+                "3) println(1, 2, 3)",
+                "4) return 1, 2, 3", 2);
     }
 
     private void createQ4(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 4, "4. Цикл do…while – это одна из вариаций цикла ...",
-                "1) while",
-                "2) for",
-                "3) if",
-                "4) do", 1);
+        createQ(primaryStage,root, 4, "4. С помощью какой функции c получателем сортируют списки?",
+                "1) .picking()",
+                "2) .sort()",
+                "3) .sorting()",
+                "4) .sorted()", 4);
     }
     private void createQ5(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 5, "5. Цикл … потенциально может выполниться любое количество раз ",
-                "1) while",
-                "2) for",
-                "3) it",
-                "4) do", 1);
+        createQ(primaryStage,root, 5, "5. Как получить элемент 4 из списка val list = listOf(5, 4, 3)",
+                "1) list.get(4)",
+                "2) list[2]",
+                "3) list[1]",
+                "4) println(4)", 3);
     }
 
     private void createQ6(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 6, "6. Отличие while от do while:",
-                "1) do-while не является оператором постусловия",
-                "2) do-while является оператором предусловия",
-                "3) do-while является оператором постусловия",
-                "4) do-while не является оператором ", 3);
+        createQ(primaryStage,root, 6, "6. Как получить число 10 с помощью списка val list = listOf(5, 3, 2)",
+                "1) list[0 + 1 + 2]",
+                "2) list.max()",
+                "3) list.sum()",
+                "4) println(10)", 3);
     }
 
     private void createQ7(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 7, "7. Оператор break:",
-                "1) пропускает лишь одну итерацию и не выходит из цикла",
-                "2) выполняет ту же функцию, что и continue",
-                "3) служит для выхода из цикла полностью ",
-                "4) не делает ничего ", 3);
+        createQ(primaryStage,root, 7, "7. Что содержит результирующий список, равный list1 + list2?",
+                "1)все элементы обоих списков",
+                "2)первые эелементы списка",
+                "3)сумму элементов по индексу",
+                "4)сумму индексов", 4);
     }
 
     private void createQ8(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 8, "8. Оператор continue:",
-                "1) пропускает лишь одну итерацию и не выходит из цикла",
-                "2) выполняет ту же функцию, что и break",
-                "3) служит для выхода из цикла полностью",
-                "4) не делает ничего ", 1);
+        createQ(primaryStage,root, 8, "8. Что нельзя делать с мутирующими списками?",
+                "1) Изменять своё содержимое операторами list[i] = element",
+                "2) Удалять элементы из списка, с уменьшением размера на 1",
+                "3) Удалять элементы из списка по индексу, с уменьшением размера на 1",
+                "4) Вставлять элементы различных типов", 4);
     }
 
     private void createQ9(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 9, "9. Оператор return:",
-                "1) пропускает лишь одну итерацию и не выходит из цикла",
-                "2) выполняет ту же функцию, что и оператор break",
-                "3) служит для выхода из цикла полностью",
-                "4) не делает ничего ", 2);
+        createQ(primaryStage,root, 9, "9. Что такое функция высшего порядка?",
+                "1) функция, которая, принимает в качестве параметра другую функцию",
+                "2) функция, которая принимает в качестве параметра список",
+                "3) функция, которая вызывает другие функции",
+                "4) все ответы неверны", 1);
     }
 
     private void createQ10(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 10, "Конструкция for (i in 1..n) { … } читается как: ",
-                "1) Для всех i в интервале от n до 1 (выполнить) …",
-                "2) Для всех 1 в интервале от i до n (выполнить) …",
-                "3) Для всех n в интервале от 1 до i (выполнить) …",
-                "4) Для всех i в интервале от 1 до n (выполнить) …", 4);
+        createQ(primaryStage,root, 10, "10. Что будет результатом операции list.filter { it != 0 }?",
+                "1)первый элемент списка, не равный нулю",
+                "2)первый элемент списка, равный нулю",
+                "3)список, содержащий элементы не равные нулю",
+                "4)список, содержащий элементы равные нулю", 3);
     }
 
     private void createQ11(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 11, "11. Что не является примером создания прогрессии:",
-                "1) 10 downTo 1 ",
-                "2) 1..99 step 2",
-                "3) 100 downTo 2 step 2",
-                "4) 1 downTo 10 ", 4);
+        createQ(primaryStage,root, 11, "11. Как получить список с единицами, используя list = mutableListOf(1, 1, 2, 3)",
+                "1) list.map{it / it}",
+                "2) list.filter{ it == 1}",
+                "3) list.subList(0, 2)",
+                "4) все ответы верны", 4);
     }
 
     private void createQ12(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 12, "12. Оператор for может использоваться не только для перебора чисел в интервале?",
-                "1) да, для перебора чисел в заданной прогрессии.",
-                "2) нет",
-                "3) да, для создания чисел в интервале",
-                "4) да, для создания символов в интервале ", 1);
+        createQ(primaryStage,root, 12, "12. Как получить 10.0 используя list = mutableListOf(2.0, 2.5, 2.0)?",
+                "1)list.fold(1.0) {previousResult, element -> previousResult * element}",
+                "2)list.fold(10) {previousResult, element -> previousResult - element}",
+                "3)list.sum()",
+                "4)list.max() * 5", 1);
     }
 
     private void createQ13(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 13, "13. Какой оператор предназначен для цикла с заданным числом повторений?",
-                "1) if",
-                "2) for",
-                "3) while",
-                "4) return", 2);
+        createQ(primaryStage,root, 13, "13. Из каких элементов состоят строки?",
+                "1)boolean",
+                "2)long",
+                "3)short",
+                "4)char", 4);
     }
 
     private void createQ14(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 14, "14. Оператор -= выполняет: ",
-                "1) домножение",
-                "2) досложение",
-                "3) довычитание ",
-                "4) доделение", 1);
+        createQ(primaryStage,root, 14, "14. Что будет результатом операции 9.toString()?",
+                "1) '9'",
+                "2) \"9\"",
+                "3) ['9']",
+                "4) [\"9\"]", 2);
     }
     private void createQ15(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 15, "15. Алгоритмическая структура с последовательностью действий, повторяющихся многократно?",
-                "1 Следование",
-                "2 Рекурсия",
-                "3 Цикл",
-                "4 Ветвление", 3);
+        createQ(primaryStage,root, 15, "15. Как можно записать переменную variable в виде строки?",
+                "1) \"@variable\"",
+                "2) \"#variable\"",
+                "3) \"$variable\"",
+                "4) \"%variable\"", 3);
     }
 
     private void createQ16(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 16, "16. Как называется последовательность действий, содержащаяся в цикле?",
-                "1) Операторный блок цикла",
-                "2) Тело цикла",
-                "3) Заголовок цикла",
-                "4) Условие цикла", 3);
+        createQ(primaryStage,root, 16, "16. С помощью какой функции можно преобразовать список в строку?",
+                "1) .toString()",
+                "2) .getString()",
+                "3) .joinToString()",
+                "4) .goToString()", 3);
     }
 
     private void createNewWindow(Stage primaryStage) {

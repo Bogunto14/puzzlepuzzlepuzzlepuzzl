@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 public class Menu extends Application{
 
-    public static Boolean[] isLevelOpened = new Boolean[] {true,false,false, false, false};
+    public static Boolean[] isLevelOpened = new Boolean[] {true, true, true, true};
 
 
     private void init(Stage primaryStage) {
@@ -37,7 +37,7 @@ public class Menu extends Application{
         level1.setStyle("-fx-border-color: green; -fx-font-size: 40px");
         level1.setOnAction(e -> openLevel1(primaryStage));
         Text text1 = new Text();
-        text1.setText("Практики");
+        text1.setText("Переменные");
         text1.setStyle("-fx-font-size: 50; -fx-font-weight: 700; -fx-fill: white; -fx-stroke: black; -fx-stroke-width: 1");
         text1.setTranslateX(150);
         text1.setTranslateY(200);
@@ -53,7 +53,7 @@ public class Menu extends Application{
             level2.setStyle("-fx-border-color: green; -fx-font-size: 40px; -fx-background-color: gray");
         }
         Text text2 = new Text();
-        text2.setText("Переменные");
+        text2.setText("Циклы");
         text2.setStyle("-fx-font-size: 50; -fx-font-weight: 700; -fx-fill: white; -fx-stroke: black; -fx-stroke-width: 1");
         text2.setTranslateX(150);
         text2.setTranslateY(300);
@@ -70,7 +70,7 @@ public class Menu extends Application{
             level3.setStyle("-fx-border-color: green; -fx-font-size: 40px; -fx-background-color: gray");
         }
         Text text3 = new Text();
-        text3.setText("Циклы");
+        text3.setText("Списки");
         text3.setStyle("-fx-font-size: 50; -fx-font-weight: 700; -fx-fill: white; -fx-stroke: black; -fx-stroke-width: 1");
         text3.setTranslateX(150);
         text3.setTranslateY(400);
@@ -87,31 +87,12 @@ public class Menu extends Application{
             level4.setStyle("-fx-border-color: green; -fx-font-size: 40px; -fx-background-color: gray");
         }
         Text text4 = new Text();
-        text4.setText("Функции");
+        text4.setText("Классы");
         text4.setStyle("-fx-font-size: 50; -fx-font-weight: 700; -fx-fill: white; -fx-stroke: black; -fx-stroke-width: 1");
         text4.setTranslateX(150);
         text4.setTranslateY(500);
 
-        Button level5 = new Button("5");
-        level5.setTranslateX(50);
-        level5.setTranslateY(540);
-        if (isLevelOpened[4]==true) {
-
-            level5.setStyle("-fx-border-color: green; -fx-font-size: 40px");
-            level5.setOnAction(e -> openLevel5(primaryStage));
-        }
-        else {
-            level5.setStyle("-fx-border-color: green; -fx-font-size: 40px; -fx-background-color: gray");
-        }
-        Text text5 = new Text();
-        text5.setText("Классы");
-        text5.setStyle("-fx-font-size: 50; -fx-font-weight: 700; -fx-fill: white; -fx-stroke: black; -fx-stroke-width: 1");
-        text5.setTranslateX(150);
-        text5.setTranslateY(600);
-
-
-
-        root.getChildren().addAll(backgroundBlack, text,bb,level1,level2,level3,level4,level5,text1,text2,text3,text4,text5);
+        root.getChildren().addAll(backgroundBlack, text,bb,level1,level2,level3,level4,text1,text2,text3,text4);
     }
 
     @Override public void start(Stage primaryStage) throws Exception{
@@ -149,14 +130,6 @@ public class Menu extends Application{
     }
     public static void openLevel4(Stage primaryStage) {
         Task4 pp = new Task4();
-        try {
-            pp.start(primaryStage);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    public static void openLevel5(Stage primaryStage) {
-        Task5 pp = new Task5();
         try {
             pp.start(primaryStage);
         } catch (Exception e) {

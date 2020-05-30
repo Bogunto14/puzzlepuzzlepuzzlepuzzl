@@ -46,7 +46,7 @@ public class Puzzle4 extends Application {
         Group root = new Group();
         primaryStage.setScene(new Scene(root));
 
-        Image image = new Image(getClass().getResourceAsStream("images/4.png"));
+        Image image = new Image(getClass().getResourceAsStream("images/5.png"));
 
         int numOfColumns = 4;
         int numOfRows = 4;
@@ -141,7 +141,7 @@ public class Puzzle4 extends Application {
         buttonsAreActive = true;
 
         q.setText(qStr);
-        q.setStyle("-fx-font-size: 18px");
+        q.setStyle("-fx-font-size: 20px");
         q.setTranslateX(50);
         q.setTranslateY(470);
 
@@ -323,135 +323,134 @@ public class Puzzle4 extends Application {
     }
 
     private void createQ1(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 1, "1.Каким свойством обладает список?",
-                "1) список может включать в себя ограниченное количество элементов",
-                "2) все элементы списка имеют один и тот же тип",
-                "3) элементы списка зависимы от соседних элементов",
-                "4) все ответы неверны", 2);
+        createQ(primaryStage,root, 1, "1. Что определяет класс?",
+                "1) значения и атрибуты",
+                "2) значения и поведение",
+                "3) поведение и атрибуты",
+                "4) все ответы неверны ", 3);
     }
 
     private void createQ2(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 2, "2. Как указывается типовой аргумент Type?",
-                "1) TypeList",
-                "2) ListOfType()",
-                "3) ListOf(Type)",
-                "4) List<Type>", 4);
+        createQ(primaryStage,root, 2, "2. Сколько раз можно вызвать метод?",
+                "1) один",
+                "2) сколько угодно раз",
+                "3) два",
+                "4) не больше 5", 2);
     }
 
     private void createQ3(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 3, "3. Выберите строку, которая вызывает следующее в консоли: [1, 2, 3]",
-                "1) listOf<1, 2, 3>",
-                "2) println(listOf(1, 2, 3))",
-                "3) println(1, 2, 3)",
-                "4) return 1, 2, 3", 2);
-    }
-
-    private void createQ4(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 4, "4. С помощью какой функции c получателем сортируют списки?",
-                "1) .picking()",
-                "2) .sort()",
-                "3) .sorting()",
-                "4) .sorted()", 4);
-    }
-    private void createQ5(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 5, "5. Как получить элемент 4 из списка val list = listOf(5, 4, 3)",
-                "1) list.get(4)",
-                "2) list[2]",
-                "3) list[1]",
-                "4) println(4)", 3);
-    }
-
-    private void createQ6(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 6, "6. Как получить число 10 с помощью списка val list = listOf(5, 3, 2)",
-                "1) list[0 + 1 + 2]",
-                "2) list.max()",
-                "3) list.sum()",
-                "4) println(10)", 3);
-    }
-
-    private void createQ7(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 7, "7. Что делает операция list1 + list2?",
-                "1) ставит на место каждого элемента из list1 " +
-                        "аналогичный по индексу из list2",
-                "2) складывает два списка, сумма списков содержит все элементы их обоих",
-                "3) складывает два списка, сумма списка содержит сумму элементов по индексу",
-                "4) складывает первые эелементы списка", 4);
-    }
-
-    private void createQ8(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 8, "8. Что нельзя делать с мутирующими списками?",
-                "1) Изменять своё содержимое операторами list[i] = element",
-                "2) Удалять элементы из списка, с уменьшением размера на 1",
-                "3) Удалять элементы из списка по индексу, с уменьшением размера на 1",
-                "4) Вставлять элементы различных типов", 4);
-    }
-
-    private void createQ9(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 9, "9. Что такое функция высшего порядка?",
-                "1) функция, которая, принимает в качестве параметра другую функцию",
-                "2) функция, которая принимает в качестве параметра список",
-                "3) функция, которая вызывает другие функции",
+        createQ(primaryStage,root, 3, "3. Ключевое слово void означает, что ...",
+                "1) метод не возвращает значение",
+                "2) метод возвращает значение",
+                "3) метод будет статическим",
                 "4) все ответы неверны", 1);
     }
 
+    private void createQ4(Stage primaryStage,Group root) {
+        createQ(primaryStage,root, 4, "4. Сколько атрибутов и методов вы можете определить?",
+                "1) не больше двух",
+                "2) один",
+                "3) сколько угодно ",
+                "4) все ответы неверны", 3);
+    }
+    private void createQ5(Stage primaryStage,Group root) {
+        createQ(primaryStage,root, 5, "5. В каком варианте класс определен верно?",
+                "1) void program(){} ",
+                "2) class Program{} ",
+                "3) int program",
+                "4) String program", 2);
+    }
+
+    private void createQ6(Stage primaryStage,Group root) {
+        createQ(primaryStage,root, 6, "6. Что является модификатором доступа?",
+                "1) public",
+                "2) private",
+                "3) protected",
+                "4) все ответы правильные", 4);
+    }
+
+    private void createQ7(Stage primaryStage,Group root) {
+        createQ(primaryStage,root, 7, "7. Какой уровень доступа имеет модификатор private?",
+                "1) доступ может быть получен только изнутри объявленного класса",
+                "2) доступ может быть получен из любого класса ",
+                "3) все ответы неверны",
+                "4) доступ может быть получен для любого класса в том пакете ", 1);
+    }
+
+    private void createQ8(Stage primaryStage,Group root) {
+        createQ(primaryStage,root, 8, "8. Какой уровень доступа имеет модификатор public?",
+                "1) доступ может быть получен только изнутри объявленного класса",
+                "2) доступ может быть получен из любого класса ",
+                "3) все ответы неверны",
+                "4) доступ может быть получен для любого класса в том пакете ", 2);
+    }
+
+    private void createQ9(Stage primaryStage,Group root) {
+        createQ(primaryStage,root, 9, "9. Какое ключевое слово используется для возвращения значения?",
+                "1) void",
+                "2) static",
+                "3) return",
+                "4) show", 3);
+    }
+
     private void createQ10(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 10, "10. Что будет результатом операции list.filter { it != 0 }?",
-                "1)первый элемент списка, не равный нулю",
-                "2)первый элемент списка, равный нулю",
-                "3)список, содержащий элементы не равные нулю",
-                "4)список, содержащий элементы равные нулю", 3);
+        createQ(primaryStage,root, 10, "10. Сколько классов может создать пользователь?",
+                "1) один",
+                "2) ноль",
+                "3) сколько угодно",
+                "4) не больше двух", 3);
     }
 
     private void createQ11(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 11, "11. Как получит ьсписок с единицами, используя list = mutableListOf(1, 1, 2, 3)",
-                "1) list.map{it / it}",
-                "2) list.filter{ it == 1}",
-                "3) list.subList(0, 2)",
-                "4) все ответы верны", 4);
+        createQ(primaryStage,root, 11, "11. Можно ли создать класс с названием Red apple",
+                "1) да, можно",
+                "2) нет, нельзя",
+                "3) можно, если класс будет являться статическим",
+                "4) зависит от ситуации ", 2);
     }
 
     private void createQ12(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 12, "12. Как получить 10.0 используя list = mutableListOf(2.0, 2.5, 2.0)?",
-                "1)list.fold(1.0) {previousResult, element -> previousResult * element}",
-                "2)list.fold(10) {previousResult, element -> previousResult - element}",
-                "3)list.sum()",
-                "4)list.max() * 5", 1);
+        createQ(primaryStage,root, 12, "12. Можно ли создать класс внутри класса?",
+                "1) да",
+                "2) нет",
+                "3) можно, если класс будет являться статическим",
+                "4) можно, но обязательно несколько классов", 1);
     }
 
     private void createQ13(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 13, "13. Из каких элементов состоят строки?",
-                "1)boolean",
-                "2)long",
-                "3)short",
-                "4)char", 4);
+        createQ(primaryStage,root, 13, "13. Что такое вложенный класс?",
+                "1) статический класс,",
+                "2) класс, вложенный в пакет",
+                "3) класс, созданный внутри другого класса",
+                "4) все ответы неверны", 3);
     }
 
     private void createQ14(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 14, "14. Что будет результатом операции 9.toString()?",
-                "1) '9'",
-                "2) \"9\"",
-                "3) ['9']",
-                "4) [\"9\"]", 2);
+        createQ(primaryStage,root, 14, "14. Какое слово пропущено при создании класса: ...Person{}?",
+                "1) new",
+                "2) double",
+                "3) int",
+                "4) class", 4);
     }
     private void createQ15(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 15, "15. Как можно записать переменную variable в виде строки?",
-                "1) \"@variable\"",
-                "2) \"#variable\"",
-                "3) \"$variable\"",
-                "4) \"%variable\"", 3);
+        createQ(primaryStage,root, 15, "15. Какой уровень доступа имеет модификатор protected?",
+                "1) доступ может быть получен только изнутри объявленного класса",
+                "2) доступ может быть получен из любого класса ",
+                "3) все ответы неверны",
+                "4) доступ может быть получен для любого класса в том пакете ", 4);
     }
 
     private void createQ16(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 16, "16. С помощью какой функции можно преобразовать список в строку?",
-                "1) .toString()",
-                "2) .getString()",
-                "3) .joinToString()",
-                "4) .goToString()", 3);
+        createQ(primaryStage,root, 16, "Какое ключевое слово служит для создания статического класса?",
+                "1) void",
+                "2) class",
+                "3) statistics",
+                "4) static", 4);
     }
 
     private void createNewWindow(Stage primaryStage) {
         Menu pp = new Menu();
-        Menu.isLevelOpened[4]=true;
+
         try {
             pp.start(primaryStage);
         } catch (Exception e) {
@@ -459,3 +458,4 @@ public class Puzzle4 extends Application {
         }
     }
 }
+

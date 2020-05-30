@@ -17,7 +17,7 @@ public class StartWindow extends Application{
     private void init(Stage primaryStage) {
         Group root = new Group();
         primaryStage.setScene(new Scene(root));
-
+        primaryStage.setResizable(false);
         ImageView backgroundBlack = new ImageView(new Image(getClass().getResourceAsStream("images/background.jpg")));
         backgroundBlack.setOpacity(0.6);
         backgroundBlack.setFitHeight(800);

@@ -1,3 +1,4 @@
+
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -46,7 +47,7 @@ public class Puzzle1 extends Application {
         Group root = new Group();
         primaryStage.setScene(new Scene(root));
 
-        Image image = new Image(getClass().getResourceAsStream("images/5.png"));
+        Image image = new Image(getClass().getResourceAsStream("images/2.png"));
 
         int numOfColumns = 4;
         int numOfRows = 4;
@@ -63,7 +64,6 @@ public class Puzzle1 extends Application {
             }
         }
         desk.getChildren().addAll(pieces);
-
 
         Text questionsText = new Text();
         questionsText.setText("Вопросы");
@@ -122,7 +122,7 @@ public class Puzzle1 extends Application {
 
         Button buttonMenu = new Button("Выйти в меню");
         buttonMenu.setTranslateX(700);
-        buttonMenu.setTranslateY(450);
+        buttonMenu.setTranslateY(600);
         buttonMenu.setStyle("-fx-border-color: rgb(46,49,20); -fx-font-size: 20px");
         buttonMenu.setOnAction(e -> {
             Menu pp = new Menu();
@@ -132,16 +132,15 @@ public class Puzzle1 extends Application {
                 ee.printStackTrace();
             }
         });
-
         root.getChildren().addAll(vb, buttonMenu);
     }
 
     private void createQ(Stage primaryStage,Group root, int now, String qStr,
-                                String a1Str, String a2Str, String a3Str, String a4Str, int trueAns) {
+                         String a1Str, String a2Str, String a3Str, String a4Str, int trueAns) {
         buttonsAreActive = true;
 
         q.setText(qStr);
-        q.setStyle("-fx-font-size: 30px");
+        q.setStyle("-fx-font-size: 20px");
         q.setTranslateX(50);
         q.setTranslateY(470);
 
@@ -189,7 +188,7 @@ public class Puzzle1 extends Application {
         if (now==16) {
             int c=0;
             for (int i = 0; i < pieces.size(); i++) {
-                if (!pieces.get(i).activeOrNot) {
+                if (pieces.get(i).activeOrNot==false) {
                     c++;
                 }
             }
@@ -209,7 +208,6 @@ public class Puzzle1 extends Application {
         trueAnswer.setTranslateX(600);
         trueAnswer.setTranslateY(550);
         trueAnswer.setOpacity(0);
-
 
         b_1.setTranslateX(50);
         b_1.setTranslateY(650);
@@ -235,7 +233,6 @@ public class Puzzle1 extends Application {
 
         });
 
-
         b_2.setTranslateX(150);
         b_2.setTranslateY(650);
         b_2.setStyle("-fx-border-color: rgb(46,49,20); -fx-font-size: 20px");
@@ -258,7 +255,6 @@ public class Puzzle1 extends Application {
                 buttonsAreActive=false;
             }
         });
-
 
         b_3.setTranslateX(250);
         b_3.setTranslateY(650);
@@ -283,7 +279,6 @@ public class Puzzle1 extends Application {
                 buttonsAreActive=false;
             }
         });
-
 
         b_4.setTranslateX(350);
         b_4.setTranslateY(650);
@@ -323,129 +318,129 @@ public class Puzzle1 extends Application {
     }
 
     private void createQ1(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 1, "1 Для чего нужны переменные?",
-                "1 Чтобы были",
-                "2 Чтобы были",
-                "3 Чтобы были",
-                "4 Чтобы были", 3);
+        createQ(primaryStage,root, 1, "1. Как создать переменную, которая в дальнейшем получит значение от 0.1 до 0.2?",
+                "1) int x;",
+                "2) double x;",
+                "3) x double;",
+                "4) x int;", 2);
     }
 
     private void createQ2(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 2, "2 Чики",
-                "1 4 были",
-                "2 3в были",
-                "3 ва были",
-                "4 ммм были", 4);
+        createQ(primaryStage,root, 2, "2. Сколько в JAVA типов переменных?",
+                "1) 6",
+                "2) 7",
+                "3) 8",
+                "4) 9", 3);
     }
 
     private void createQ3(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 3, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 3, "3. Можно ли использовать символ $ в названиях переменных?",
+                "1) да",
+                "2) нет",
+                "3) только в начале названия переменной",
+                "4) только если это переменная типа boolean", 2);
     }
 
     private void createQ4(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 4, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 4, "4. Можно ли создать переменную num_of_x если уже есть переменная num_of_X?",
+                "1) да",
+                "2) нет",
+                "3) только если они разных типов",
+                "4) только если они одинакого типа", 1);
     }
     private void createQ5(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 5, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 5, "5. Можно ли создать переменную с названием Number?",
+                "1) да",
+                "2) да, но не желательно",
+                "3) нет",
+                "4) только если она типа float", 2);
     }
 
     private void createQ6(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 6, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 6, "6. Можно ли создать переменную с названием Chisla?",
+                "1) нет",
+                "2) да",
+                "3) только если она типа int или float",
+                "4) да, но не желательно ", 4);
     }
 
     private void createQ7(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 7, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 7, "7. Как создать переменную со значением 0.4?",
+                "1) int x = 0.4",
+                "2) float x = 0,4",
+                "3) double x = 0.4",
+                "4) boolean x = 0,4", 3);
     }
 
     private void createQ8(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 8, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 8, "8. Сколько байт памяти занимает переменная float?",
+                "1) 1 байт",
+                "2) 2 байта",
+                "3) 3 байта",
+                "4) 4 байта", 4);
     }
 
     private void createQ9(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 9, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 9, "9. Сколько байт памяти занимает переменная boolean?",
+                "1) 1 байт",
+                "2) 2 байта",
+                "3) 3 байта",
+                "4) 4 байта",1);
     }
 
     private void createQ10(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 10, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 10, "10. Сколько байт памяти занимает переменная short?",
+                "1) 1 байт",
+                "2) 2 байта",
+                "3) 3 байта",
+                "4) 4 байта", 2);
     }
 
     private void createQ11(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 11, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 11, "11. Сколько байт памяти занимает переменная int?",
+                "1) 1 байт",
+                "2) 2 байта",
+                "3) 3 байта",
+                "4) 4 байта", 4);
     }
 
     private void createQ12(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 12, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 12, "12. Сколько значений может принимать переменная типа boolean?",
+                "1) 1",
+                "2) 2",
+                "3) 4",
+                "4) сколько угодно", 2);
     }
 
     private void createQ13(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 13, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 13, "13. Можно ли назвать переменную \"x 2\"",
+                "1) да",
+                "2) нет",
+                "3) да, но не желательно",
+                "4) только если она будет второй", 2);
     }
 
     private void createQ14(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 14, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 14, "14. Может ли значение int быть больше чем 2048?",
+                "1) да",
+                "2) нет",
+                "3) да, если в названии имеется такое число",
+                "4) зависит от ситуации", 1);
     }
     private void createQ15(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 15, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 15, "15. Для чего нужен тип char?",
+                "1) для обозначения переменной, содержащей целое число",
+                "2) для обозначения переменной, содержащей дробное число",
+                "3) для обозначения переменной, содержащей символ",
+                "4) для обозначения переменной, содержащей строку", 3);
     }
 
     private void createQ16(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 16, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 16, "16. Для чего нужен тип string?",
+                "1) для обозначения переменной, содержащей целое число",
+                "2) для обозначения переменной, содержащей дробное число",
+                "3) для обозначения переменной, содержащей символ",
+                "4) для обозначения переменной, содержащей строку",4);
     }
 
     private void createNewWindow(Stage primaryStage) {

@@ -1,4 +1,3 @@
-
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -47,7 +46,7 @@ public class Puzzle2 extends Application {
         Group root = new Group();
         primaryStage.setScene(new Scene(root));
 
-        Image image = new Image(getClass().getResourceAsStream("images/2.png"));
+        Image image = new Image(getClass().getResourceAsStream("images/5.png"));
 
         int numOfColumns = 4;
         int numOfRows = 4;
@@ -64,6 +63,7 @@ public class Puzzle2 extends Application {
             }
         }
         desk.getChildren().addAll(pieces);
+
 
         Text questionsText = new Text();
         questionsText.setText("Вопросы");
@@ -132,6 +132,7 @@ public class Puzzle2 extends Application {
                 ee.printStackTrace();
             }
         });
+
         root.getChildren().addAll(vb, buttonMenu);
     }
 
@@ -209,6 +210,7 @@ public class Puzzle2 extends Application {
         trueAnswer.setTranslateY(550);
         trueAnswer.setOpacity(0);
 
+
         b_1.setTranslateX(50);
         b_1.setTranslateY(650);
         b_1.setStyle("-fx-border-color: rgb(46,49,20); -fx-font-size: 20px");
@@ -233,6 +235,7 @@ public class Puzzle2 extends Application {
 
         });
 
+
         b_2.setTranslateX(150);
         b_2.setTranslateY(650);
         b_2.setStyle("-fx-border-color: rgb(46,49,20); -fx-font-size: 20px");
@@ -255,6 +258,7 @@ public class Puzzle2 extends Application {
                 buttonsAreActive=false;
             }
         });
+
 
         b_3.setTranslateX(250);
         b_3.setTranslateY(650);
@@ -279,6 +283,7 @@ public class Puzzle2 extends Application {
                 buttonsAreActive=false;
             }
         });
+
 
         b_4.setTranslateX(350);
         b_4.setTranslateY(650);
@@ -318,129 +323,129 @@ public class Puzzle2 extends Application {
     }
 
     private void createQ1(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 1, "1. Как создать переменную, которая в дальнейшем получит значение от 0.1 до 0.2?",
-                "1) int x;",
-                "2) double x;",
-                "3) x double;",
-                "4) x int;", 2);
+        createQ(primaryStage,root, 1, "1. Цикл For называют:",
+                "1) со счетчиком",
+                "2) делать до тех пор, пока",
+                "3) пока",
+                "4) во время того, как", 1);
     }
 
     private void createQ2(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 2, "2. Сколько в JAVA типов переменных?",
-                "1) 6",
-                "2) 7",
-                "3) 8",
-                "4) 9", 3);
+        createQ(primaryStage,root, 2, "2.  Цикл while называют:",
+                "1) со счетчиком",
+                "2) делать до тех пор, пока",
+                "3) пока",
+                "4) во время того, как", 3);
     }
 
     private void createQ3(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 3, "3. Можно ли использовать символ $ в названиях переменных?",
-                "1) да",
-                "2) нет",
-                "3) только в начале названия переменной",
-                "4) только если это переменная типа boolean", 2);
+        createQ(primaryStage,root, 3, "3. Цикл do while называют:",
+                "1) со счетчиком",
+                "2) делать до тех пор, пока",
+                "3) пока",
+                "4) во время того, как", 2);
     }
 
     private void createQ4(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 4, "4. Можно ли создать переменную num_of_x если уже есть переменная num_of_X?",
-                "1) да",
-                "2) нет",
-                "3) только если они разных типов",
-                "4) только если они одинакого типа", 1);
+        createQ(primaryStage,root, 4, "4. Цикл do…while – это одна из вариаций цикла ...",
+                "1) while",
+                "2) for",
+                "3) if",
+                "4) do", 1);
     }
     private void createQ5(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 5, "5. Можно ли создать переменную с названием Number?",
-                "1) да",
-                "2) да, но не желательно",
-                "3) нет",
-                "4) только если она типа float", 2);
+        createQ(primaryStage,root, 5, "5. Цикл … потенциально может выполниться любое количество раз ",
+                "1) while",
+                "2) for",
+                "3) it",
+                "4) do", 1);
     }
 
     private void createQ6(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 6, "6. Можно ли создать переменную с названием Chisla?",
-                "1) нет",
-                "2) да",
-                "3) только если она типа int или float",
-                "4) да, но не желательно ", 4);
+        createQ(primaryStage,root, 6, "6. Отличие while от do while:",
+                "1) do-while не является оператором постусловия",
+                "2) do-while является оператором предусловия",
+                "3) do-while является оператором постусловия",
+                "4) do-while не является оператором ", 3);
     }
 
     private void createQ7(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 7, "7. Как создать переменную со значением 0.4?",
-                "1) int x = 0.4",
-                "2) float x = 0,4",
-                "3) double x = 0.4",
-                "4) boolean x = 0,4", 3);
+        createQ(primaryStage,root, 7, "7. Оператор break:",
+                "1) пропускает лишь одну итерацию и не выходит из цикла",
+                "2) выполняет ту же функцию, что и continue",
+                "3) служит для выхода из цикла полностью ",
+                "4) не делает ничего ", 3);
     }
 
     private void createQ8(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 8, "8. Сколько байт памяти занимает переменная float?",
-                "1) 1 байт",
-                "2) 2 байта",
-                "3) 3 байта",
-                "4) 4 байта", 4);
+        createQ(primaryStage,root, 8, "8. Оператор continue:",
+                "1) пропускает лишь одну итерацию и не выходит из цикла",
+                "2) выполняет ту же функцию, что и break",
+                "3) служит для выхода из цикла полностью",
+                "4) не делает ничего ", 1);
     }
 
     private void createQ9(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 9, "9. Сколько байт памяти занимает переменная boolean?",
-        "1) 1 байт",
-                "2) 2 байта",
-                "3) 3 байта",
-                "4) 4 байта",1);
+        createQ(primaryStage,root, 9, "9. Оператор return:",
+                "1) пропускает лишь одну итерацию и не выходит из цикла",
+                "2) выполняет ту же функцию, что и оператор break",
+                "3) служит для выхода из цикла полностью",
+                "4) не делает ничего ", 2);
     }
 
     private void createQ10(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 10, "10. Сколько байт памяти занимает переменная short?",
-                "1) 1 байт",
-                "2) 2 байта",
-                "3) 3 байта",
-                "4) 4 байта", 2);
+        createQ(primaryStage,root, 10, "Конструкция for (i in 1..n) { … } читается как: ",
+                "1) Для всех i в интервале от n до 1 (выполнить) …",
+                "2) Для всех 1 в интервале от i до n (выполнить) …",
+                "3) Для всех n в интервале от 1 до i (выполнить) …",
+                "4) Для всех i в интервале от 1 до n (выполнить) …", 4);
     }
 
     private void createQ11(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 11, "11. Сколько байт памяти занимает переменная int?",
-                "1) 1 байт",
-                "2) 2 байта",
-                "3) 3 байта",
-                "4) 4 байта", 4);
+        createQ(primaryStage,root, 11, "11. Что не является примером создания прогрессии:",
+                "1) 10 downTo 1 ",
+                "2) 1..99 step 2",
+                "3) 100 downTo 2 step 2",
+                "4) 1 downTo 10 ", 4);
     }
 
     private void createQ12(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 12, "12. Сколько значений может принимать переменная типа boolean?",
-                "1) 1",
-                "2) 2",
-                "3) 4",
-                "4) сколько угодно", 2);
+        createQ(primaryStage,root, 12, "12. Оператор for может использоваться не только для перебора чисел в интервале?",
+                "1) да, для перебора чисел в заданной прогрессии.",
+                "2) нет",
+                "3) да, для создания чисел в интервале",
+                "4) да, для создания символов в интервале ", 1);
     }
 
     private void createQ13(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 13, "13. Можно ли назвать переменную \"x 2\"",
-                "1) да",
-                "2) нет",
-                "3) да, но не желательно",
-                "4) только если она будет второй", 2);
+        createQ(primaryStage,root, 13, "13. Какой оператор предназначен для цикла с заданным числом повторений?",
+                "1) if",
+                "2) for",
+                "3) while",
+                "4) return", 2);
     }
 
     private void createQ14(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 14, "14. Может ли значение int быть больше чем 2048?",
-                "1) да",
-                "2) нет",
-                "3) да, если в названии имеется такое число",
-                "4) зависит от ситуации", 1);
+        createQ(primaryStage,root, 14, "14. Оператор -= выполняет: ",
+                "1) домножение",
+                "2) досложение",
+                "3) довычитание ",
+                "4) доделение", 3);
     }
     private void createQ15(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 15, "15. Для чего нужен тип char?",
-                "1) для обозначения переменной, содержащей целое число",
-                "2) для обозначения переменной, содержащей дробное число",
-                "3) для обозначения переменной, содержащей символ",
-                "4) для обозначения переменной, содержащей строку", 3);
+        createQ(primaryStage,root, 15, "15. Алгоритмическая структура с последовательностью действий, повторяющихся многократно?",
+                "1 Следование",
+                "2 Рекурсия",
+                "3 Цикл",
+                "4 Ветвление", 3);
     }
 
     private void createQ16(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 16, "16. Для чего нужен тип string?",
-                "1) для обозначения переменной, содержащей целое число",
-                "2) для обозначения переменной, содержащей дробное число",
-                "3) для обозначения переменной, содержащей символ",
-                "4) для обозначения переменной, содержащей строку",4);
+        createQ(primaryStage,root, 16, "16. Как называется последовательность действий, содержащаяся в цикле?",
+                "1) Операторный блок цикла",
+                "2) Тело цикла",
+                "3) Заголовок цикла",
+                "4) Условие цикла", 2);
     }
 
     private void createNewWindow(Stage primaryStage) {
