@@ -122,7 +122,7 @@ public class Puzzle3 extends Application {
 
         Button buttonMenu = new Button("Выйти в меню");
         buttonMenu.setTranslateX(700);
-        buttonMenu.setTranslateY(450);
+        buttonMenu.setTranslateY(600);
         buttonMenu.setStyle("-fx-border-color: rgb(46,49,20); -fx-font-size: 20px");
         buttonMenu.setOnAction(e -> {
             Menu pp = new Menu();
@@ -141,7 +141,7 @@ public class Puzzle3 extends Application {
         buttonsAreActive = true;
 
         q.setText(qStr);
-        q.setStyle("-fx-font-size: 30px");
+        q.setStyle("-fx-font-size: 20px");
         q.setTranslateX(50);
         q.setTranslateY(470);
 
@@ -326,126 +326,126 @@ public class Puzzle3 extends Application {
         createQ(primaryStage,root, 1, "1. Цикл For называют:",
                 "1) со счетчиком",
                 "2) делать до тех пор, пока",
-                "3) Чтобы были",
-                "4) Чтобы были", 3);
+                "3) чтобы были",
+                "4) чтобы были", 1);
     }
 
     private void createQ2(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 2, "2 Чики",
-                "1 4 были",
-                "2 3в были",
-                "3 ва были",
-                "4 ммм были", 4);
+        createQ(primaryStage,root, 2, "2.  Цикл while называют:",
+                "1) со счетчиком",
+                "2) делать до тех пор, пока",
+                "3) пока",
+                "4) во время того, как", 3);
     }
 
     private void createQ3(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 3, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 3, "3. Цикл do while называют:",
+                "1) со счетчиком",
+                "2) делать до тех пор, пока",
+                "3) пока",
+                "4) во время того, как", 2);
     }
 
     private void createQ4(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 4, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 4, "4. Цикл do…while – это одна из вариаций цикла ...",
+                "1) while",
+                "2) for",
+                "3) if",
+                "4) do", 1);
     }
     private void createQ5(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 5, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 5, "5. Цикл … потенциально может выполниться любое количество раз ",
+                "1) while",
+                "2) for",
+                "3) it",
+                "4) do", 1);
     }
 
     private void createQ6(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 6, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 6, "6. Отличие while от do while:",
+                "1) do-while не является оператором постусловия",
+                "2) do-while является оператором предусловия",
+                "3) do-while является оператором постусловия",
+                "4) do-while не является оператором ", 3);
     }
 
     private void createQ7(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 7, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 7, "7. Оператор break:",
+                "1) пропускает лишь одну итерацию и не выходит из цикла",
+                "2) выполняет ту же функцию, что и continue",
+                "3) служит для выхода из цикла полностью ",
+                "4) не делает ничего ", 3);
     }
 
     private void createQ8(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 8, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 8, "8. Оператор continue:",
+                "1) пропускает лишь одну итерацию и не выходит из цикла",
+                "2) выполняет ту же функцию, что и break",
+                "3) служит для выхода из цикла полностью",
+                "4) не делает ничего ", 1);
     }
 
     private void createQ9(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 9, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 9, "9. Оператор return:",
+                "1) пропускает лишь одну итерацию и не выходит из цикла",
+                "2) выполняет ту же функцию, что и оператор break",
+                "3) служит для выхода из цикла полностью",
+                "4) не делает ничего ", 2);
     }
 
     private void createQ10(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 10, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 10, "Конструкция for (i in 1..n) { … } читается как: ",
+                "1) Для всех i в интервале от n до 1 (выполнить) …",
+                "2) Для всех 1 в интервале от i до n (выполнить) …",
+                "3) Для всех n в интервале от 1 до i (выполнить) …",
+                "4) Для всех i в интервале от 1 до n (выполнить) …", 4);
     }
 
     private void createQ11(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 11, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 11, "11. Что не является примером создания прогрессии:",
+                "1) 10 downTo 1 ",
+                "2) 1..99 step 2",
+                "3) 100 downTo 2 step 2",
+                "4) 1 downTo 10 ", 4);
     }
 
     private void createQ12(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 12, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 12, "12. Оператор for может использоваться не только для перебора чисел в интервале?",
+                "1) да, для перебора чисел в заданной прогрессии.",
+                "2) нет",
+                "3) да, для создания чисел в интервале",
+                "4) да, для создания символов в интервале ", 1);
     }
 
     private void createQ13(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 13, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 13, "13. Какой оператор предназначен для цикла с заданным числом повторений?",
+                "1) if",
+                "2) for",
+                "3) while",
+                "4) return", 2);
     }
 
     private void createQ14(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 14, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 14, "14. Оператор -= выполняет: ",
+                "1) домножение",
+                "2) досложение",
+                "3) довычитание ",
+                "4) доделение", 1);
     }
     private void createQ15(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 15, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 15, "15. Алгоритмическая структура с последовательностью действий, повторяющихся многократно?",
+                "1 Следование",
+                "2 Рекурсия",
+                "3 Цикл",
+                "4 Ветвление", 3);
     }
 
     private void createQ16(Stage primaryStage,Group root) {
-        createQ(primaryStage,root, 16, "3 вава",
-                "1 ваввыли",
-                "2 3ввввв были",
-                "3 ввввва были",
-                "4 мвввмм были", 4);
+        createQ(primaryStage,root, 16, "16. Как называется последовательность действий, содержащаяся в цикле?",
+                "1) Операторный блок цикла",
+                "2) Тело цикла",
+                "3) Заголовок цикла",
+                "4) Условие цикла", 3);
     }
 
     private void createNewWindow(Stage primaryStage) {

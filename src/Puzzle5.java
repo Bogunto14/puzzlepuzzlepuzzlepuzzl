@@ -141,7 +141,7 @@ public class Puzzle5 extends Application {
         buttonsAreActive = true;
 
         q.setText(qStr);
-        q.setStyle("-fx-font-size: 30px");
+        q.setStyle("-fx-font-size: 20px");
         q.setTranslateX(50);
         q.setTranslateY(470);
 

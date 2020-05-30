@@ -369,7 +369,7 @@ public class Puzzle2 extends Application {
                 "1) int x = 0.4",
                 "2) float x = 0,4",
                 "3) double x = 0.4",
-                "4) boolean x = 0,4", 2);
+                "4) boolean x = 0,4", 3);
     }
 
     private void createQ8(Stage primaryStage,Group root) {
